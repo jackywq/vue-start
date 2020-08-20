@@ -5,8 +5,6 @@
         <a-tab-pane key="home" tab="首页" />
         <a-tab-pane key="about" tab="关于" />
       </a-tabs>
-      <!-- <router-link to="/home">首页</router-link> |
-      <router-link to="/about">关于</router-link> -->
     </div>
     <router-view></router-view>
   </div>

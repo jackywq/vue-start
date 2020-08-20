@@ -5,9 +5,10 @@ import store from './store'
 
 import 'ant-design-vue/dist/antd.css'
 
-import { Button, Tabs, message } from 'ant-design-vue'
+import { Button, Tabs, message, Input } from 'ant-design-vue'
 
 Vue.use(Button)
+Vue.use(Input)
 Vue.use(Tabs)
 
 Vue.prototype.$message = message
