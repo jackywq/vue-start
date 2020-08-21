@@ -15,21 +15,28 @@
     </div>
     <div>
       <h3>vuex测试：</h3>
-      <p>当前count的值为：{{$store.state.count}}</p>
+      <p>当前count的值为：{{count}}</p>
       <a-button type="primary" @click="handleAdd">+1</a-button>
       <a-button type="primary" @click="handleDel" class="left-tap">-1</a-button>
-      <a-button type="primary" @click="handleAddn" class="left-tap">+n</a-button>
       <a-button type="primary" @click="handleAddAsync" class="left-tap">+1 async</a-button>
-      <a-button type="primary" @click="handleAddnAsync" class="left-tap">+n async</a-button>
       <div class="top-tap">
-        <a-input style="width: 200px" placeholder="请输入count" @change="handleInputChange" />
+        <a-button type="primary" @click="handleAddn" class="left-tap">+n</a-button>
+        <a-button type="primary" @click="handleAddnAsync" class="left-tap">+n async</a-button>
+        <a-input style="width: 200px" class="left-tap" placeholder="请输入count" @change="handleInputChange" />
+      </div>
+      <div class="top-tap">
+        <div>
+          <b>getters:</b>
+          <!-- {{ this.$store.getters.getCount }} -->
+          获取当前count最新的值: {{getCount}}
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="javascript">
-import { mapMutations } from 'vuex'
+import { mapMutations, mapActions, mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'HelloWorld',
@@ -41,7 +48,7 @@ export default {
   },
   methods: {
     ...mapMutations(['INCREMENT', 'DECREMENT']),
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    ...mapActions(['incrementAsync']),
     handleToAbout () {
       this.$router.push('/about/123')
     },
@@ -64,7 +71,8 @@ export default {
     },
     handleAddnAsync () {
       if (this.inputValue) {
-        this.$store.dispatch('incrementAsync', { count: this.inputValue })
+        this.incrementAsync({ count: this.inputValue })
+        // this.$store.dispatch('incrementAsync', { count: this.inputValue })
       }
     },
     handleInputChange (e) {
@@ -73,9 +81,8 @@ export default {
     }
   },
   computed: {
-    count () {
-      return this.$store.state.count
-    }
+    ...mapState(['count']),
+    ...mapGetters(['getCount'])
   }
 }
 </script>

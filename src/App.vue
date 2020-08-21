@@ -3,7 +3,7 @@
     <div id="nav">
       <a-tabs default-active-key="home" @change="handleTabsClick">
         <a-tab-pane key="home" tab="首页" />
-        <a-tab-pane key="about" tab="关于" />
+        <a-tab-pane key="moduleA" tab="模块一" />
       </a-tabs>
     </div>
     <router-view></router-view>

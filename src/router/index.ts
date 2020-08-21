@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Login from '../views/Login.vue'
+import ModuleA from '../views/ModuleA.vue'
 import profileList from '../views/children/profileList.vue'
 import profileItem from '../views/children/profileItem.vue'
 
@@ -25,14 +24,9 @@ const routes: Array<RouteConfig> = [
     ]
   },
   {
-    path: '/about/:id',
-    name: 'About',
-    component: About
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login
+    path: '/moduleA',
+    name: 'ModuleA',
+    component: ModuleA
   }
 ]
 
