@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { INCREMENT, DECREMENT } from './mutations-type'
-import moduleA from './moduleA'
+import ModuleA from './moduleA'
 
 Vue.use(Vuex)
 
@@ -43,6 +43,6 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    moduleA
+    ModuleA
   }
 })

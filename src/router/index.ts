@@ -5,6 +5,14 @@ import ModuleA from '../views/ModuleA.vue'
 import profileList from '../views/children/profileList.vue'
 import profileItem from '../views/children/profileItem.vue'
 
+/* eslint-disable */
+// 修复 Error: Avoided redundant navigation to current location:报错，提示路由重复问题
+const originalPush = VueRouter.prototype.push
+
+VueRouter.prototype.push = function push(location: any) {
+  return (originalPush.call(this, location) as any).catch((err: any) => err)
+}
+
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [

@@ -12,14 +12,15 @@ import { mapMutations, mapState } from 'vuex'
 export default {
   name: 'ModuleA',
   methods: {
+    ...mapMutations(['ModuleA/add']),
     handleAdd () {
-      // this.$store.commit('module/moduleA/add')
-      console.log(1111111)
+      this['ModuleA/add']()
+      // this.$store.commit('ModuleA/add')
     }
   },
   computed: {
     ...mapState({
-      count: state => state.moduleA.count
+      count: state => state.ModuleA.count
     })
   }
 }
