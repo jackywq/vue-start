@@ -2,8 +2,6 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import ModuleA from '../views/ModuleA.vue'
-import profileList from '../views/children/profileList.vue'
-import profileItem from '../views/children/profileItem.vue'
 
 /* eslint-disable */
 // 修复 Error: Avoided redundant navigation to current location:报错，提示路由重复问题
@@ -20,26 +18,16 @@ const routes: Array<RouteConfig> = [
     path: '/home',
     name: 'Home',
     component: Home,
-    children: [
-      {
-        path: '/home/list',
-        component: profileList
-      },
-      {
-        path: '/home/item',
-        component: profileItem
-      }
-    ]
   },
   {
     path: '/moduleA',
     name: 'ModuleA',
-    component: ModuleA
-  }
+    component: ModuleA,
+  },
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
 })
 
 // token失效
