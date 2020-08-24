@@ -1,24 +1,9 @@
-# vue-demo
+## 项目简介
 
-## Project setup
-```
-yarn install
-```
+- 使用vue2.x + vuex + vueRouter的简单测试功能的demo项目
 
-### Compiles and hot-reloads for development
+## 命令使用
 ```
-yarn serve
+npm install 
+npm run serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
