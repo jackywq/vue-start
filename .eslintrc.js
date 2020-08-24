@@ -41,6 +41,8 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': ['off'],
     '@typescript-eslint/no-explicit-any': ['off'], // 先忽略，但是尽量少用 any
     'vue/max-attributes-per-line': ['off'],
-    'vue/html-self-closing': ['off']
+    'vue/html-self-closing': ['off'],
+    'vue/multiline-html-element-content-newline': ['off'],
+    'vue/singleline-html-element-content-newline': ['off'],
   },
 }
