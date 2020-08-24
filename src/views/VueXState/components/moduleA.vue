@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="moduleA">
     <h3>vuex module 测试：</h3>
     <p>当前count的值为：{{ count }}</p>
     <a-button type="primary" @click="handleAdd">
@@ -27,3 +27,8 @@ export default {
   },
 }
 </script>
+<style lang="less">
+.moduleA {
+  margin-top: 50px;
+}
+</style>

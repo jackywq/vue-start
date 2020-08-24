@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <a-tabs default-active-key="home" @change="handleTabsClick">
+      <a-tabs :default-active-key="curKey" @change="handleTabsClick">
         <a-tab-pane key="home" tab="首页" />
-        <a-tab-pane key="moduleA" tab="模块一" />
+        <a-tab-pane key="vueXState" tab="vuex" />
+        <a-tab-pane key="vueRoute" tab="vue-router" />
       </a-tabs>
     </div>
     <router-view />
@@ -13,11 +14,20 @@
 <script lang="javascript">
 export default {
   name: 'App',
+  data: function() {
+    return {
+      curKey: 'home'
+    };
+  },
+  created () {
+    const { path } = this.$route;
+    this.curKey = path.slice(1);
+  },
   methods: {
     handleTabsClick (value) {
       this.$router.push(`/${value}`)
     }
-  }
+  },
 }
 </script>
 

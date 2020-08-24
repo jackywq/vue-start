@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
-import ModuleA from '../views/ModuleA.vue'
+import VueXState from '../views/VueXState/index.vue'
+import VueRoute from '../views/VueRoute.vue'
 
 /* eslint-disable */
 // 修复 Error: Avoided redundant navigation to current location:报错，提示路由重复问题
@@ -20,9 +21,14 @@ const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
-    path: '/moduleA',
-    name: 'ModuleA',
-    component: ModuleA,
+    path: '/vueXState',
+    name: 'VueXState',
+    component: VueXState,
+  },
+  {
+    path: '/vueRoute',
+    name: 'VueRoute',
+    component: VueRoute,
   },
 ]
 
