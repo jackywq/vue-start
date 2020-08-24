@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/Home/index.vue'
 import VueXState from '../views/VueXState/index.vue'
-import VueRoute from '../views/VueRoute.vue'
+import VueRoute from '../views/VueRoute/index.vue'
 
 /* eslint-disable */
 // 修复 Error: Avoided redundant navigation to current location:报错，提示路由重复问题

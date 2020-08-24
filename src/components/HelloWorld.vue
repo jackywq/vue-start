@@ -5,8 +5,8 @@
       <a-button type="primary" @click="show = !show">
         Toggle
       </a-button>
-      <transition name="fade">
-        <p v-if="show">
+      <transition name="slide-fade">
+        <p v-show="show">
           hello
         </p>
       </transition>
@@ -20,7 +20,6 @@
 </template>
 
 <script lang="javascript">
-
 export default {
   name: 'HelloWorld',
   data: function () {
@@ -45,11 +44,17 @@ export default {
     display: inline-block;
     margin: 0 10px;
   }
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity 0.5s;
+  /* 可以设置不同的进入和离开动画 */
+  /* 设置持续时间和动画函数 */
+  .slide-fade-enter-active {
+    transition: all 0.3s ease;
   }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  .slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+    transform: translateX(10px);
     opacity: 0;
   }
 }
