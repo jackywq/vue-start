@@ -7,6 +7,7 @@
         <a-tab-pane key="vueRoute" tab="vue-router" />
       </a-tabs>
     </div>
+    <!-- 组件和路径的一种映射，路由的出口，不加router-view页面无法跳转显示 -->
     <router-view />
   </div>
 </template>
