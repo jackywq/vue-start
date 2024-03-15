@@ -3,12 +3,8 @@
     <div>
       <h3>vuex测试：</h3>
       <p>当前count的值为：{{ count }}</p>
-      <a-button type="primary" @click="handleAdd">
-        +1
-      </a-button>
-      <a-button type="primary" class="left-tap" @click="handleDel">
-        -1
-      </a-button>
+      <a-button type="primary" @click="handleAdd">+1</a-button>
+      <a-button type="primary" class="left-tap" @click="handleDel">-1</a-button>
       <a-button type="primary" class="left-tap" @click="handleAddAsync">
         +1 async
       </a-button>
@@ -20,7 +16,7 @@
           +n async
         </a-button>
         <a-input
-          style="width: 200px;"
+          style="width: 200px"
           class="left-tap"
           placeholder="请输入count"
           @change="handleInputChange"

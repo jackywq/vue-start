@@ -8,9 +8,7 @@
       <div v-if="msg1">Message got outside $nextTick: {{ msg1 }}</div>
       <div v-if="msg2">Message got inside $nextTick: {{ msg2 }}</div>
       <div v-if="msg3">Message got outside $nextTick: {{ msg3 }}</div>
-      <button @click="changeMsg">
-        Change the Message
-      </button>
+      <button @click="changeMsg">Change the Message</button>
     </div>
   </div>
 </template>

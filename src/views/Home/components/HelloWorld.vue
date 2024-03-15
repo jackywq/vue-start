@@ -2,13 +2,9 @@
   <div class="hello">
     <div>
       <h3>transition测试：</h3>
-      <a-button type="primary" @click="show = !show">
-        Toggle
-      </a-button>
+      <a-button type="primary" @click="show = !show">Toggle</a-button>
       <transition name="slide-fade">
-        <p v-show="show">
-          hello
-        </p>
+        <p v-show="show">hello</p>
       </transition>
     </div>
     <div>
