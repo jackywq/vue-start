@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home/index.vue'
 import VueXState from '../views/VueXState/index.vue'
 import VueRoute from '../views/VueRoute/index.vue'
+import ExecuteOrder from '../views/ExecuteOrder/index.vue'
 
 /* eslint-disable */
 // 修复 Error: Avoided redundant navigation to current location:报错，提示路由重复问题
@@ -29,6 +30,11 @@ const routes: Array<RouteConfig> = [
     path: '/vueRoute',
     name: 'VueRoute',
     component: VueRoute,
+  },
+  {
+    path: '/executeOrder',
+    name: 'ExecuteOrder',
+    component: ExecuteOrder,
   },
 ]
 

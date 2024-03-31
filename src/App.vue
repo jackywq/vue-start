@@ -5,6 +5,7 @@
         <a-tab-pane key="home" tab="首页" />
         <a-tab-pane key="vueXState" tab="vuex" />
         <a-tab-pane key="vueRoute" tab="vue-router" />
+        <a-tab-pane key="executeOrder" tab="vue2父子组件执行顺序" />
       </a-tabs>
     </div>
     <!-- 组件和路径的一种映射，路由的出口，不加router-view页面无法跳转显示 -->
